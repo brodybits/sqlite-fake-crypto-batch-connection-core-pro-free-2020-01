@@ -524,6 +524,25 @@ class SCCoreGlueTest {
     assertTrue(connection < 0);
   }
 
+  static void test_crypto_01() {
+    final int connection1 =
+      testOpenFileConnection("test_crypto_01", "test_crypto_01.db");
+
+    assertTrue(connection1 > 0);
+
+    assertEquals(0, // SQLite OK
+      SCCoreGlue.scc_key(connection1, "correct")
+      );
+
+    // same db file
+    final int connection2 =
+      testOpenFileConnection("test_crypto_01", "test_crypto_01.db");
+
+    assertEquals(1, // SQLite ERROR
+      SCCoreGlue.scc_key(connection2, "wrong-password")
+      );
+  }
+
   public static void main(String [] args) {
     test_1();
     test_2();
@@ -535,6 +554,8 @@ class SCCoreGlueTest {
     test_11();
 
     test_21();
+
+    test_crypto_01();
   }
 
   static {
