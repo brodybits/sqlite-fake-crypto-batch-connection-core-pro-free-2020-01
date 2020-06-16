@@ -743,6 +743,23 @@ static void test_21() {
   TEST_ASSERT_ALWAYS(connection_id < 0);
 }
 
+static void test_crypto_01() {
+  const char * test_key = "test-crypto-key-01";
+
+  const int connection_id1 =
+    test_open_file_connection(__func__, "test_crypto_01.db");
+
+  TEST_ASSERT_ALWAYS(connection_id1 > 0);
+
+  TEST_ASSERT_INT_EQUALS(0, scc_key(connection_id1, "correct"));
+
+  // on the same database file (...)
+  const int connection_id2 =
+    test_open_file_connection(__func__, "test_crypto_01.db");
+
+  TEST_ASSERT_INT_EQUALS(1, scc_key(connection_id2, "wrong-password"));
+}
+
 int main(int argc, char ** argv) {
   test_init();
 
@@ -761,4 +778,6 @@ int main(int argc, char ** argv) {
   test_21();
 
   test_u0000_01();
+
+  test_crypto_01();
 }
