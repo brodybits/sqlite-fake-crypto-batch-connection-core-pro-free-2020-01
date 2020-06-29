@@ -1,8 +1,11 @@
-# FAKE CRYPTO SQLite batch connection core PRO-FREE 2020-01
+# FAKE CRYPTO SQLite batch connection core pro-free 2020-01
 
-FAKE CRYPTO using fake `sqlite3_key` for testing purposes
+with FAKE CRYPTO using fake `sqlite3_key` for testing purposes
 
-based on: (...)
+based on:
+
+- [`github:brodybits/sqlite-batch-connection-core-pro-free-2020-01`](https://github.com/brodybits/sqlite-batch-connection-core-pro-free-2020-01)
+- [`github:brodybits/sqlite-fake-crypto-batch-connection-core-2020-01`](https://github.com/brodybits/sqlite-fake-crypto-batch-connection-core-2020-01)
 
 **Author:** Christopher J. Brody <mailto:chris.brody+brodybits@gmail.com>
 
