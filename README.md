@@ -2,7 +2,10 @@
 
 with FAKE CRYPTO using fake `sqlite3_key` for testing purposes
 
-based on: [`github:brodybits/sqlite-batch-connection-core-pro-free-2020-01`](https://github.com/brodybits/sqlite-batch-connection-core-pro-free-2020-01), [`brodybits/sqlite-fake-crypto-batch-connection-core-pro-free-2020-01`](https://github.com/brodybits/sqlite-fake-crypto-batch-connection-core-pro-free-2020-01)
+based on:
+
+- [`github:brodybits/sqlite-batch-connection-core-pro-free-2020-01`](https://github.com/brodybits/sqlite-batch-connection-core-pro-free-2020-01)
+- [`github:brodybits/sqlite-fake-crypto-batch-connection-core-2020-01`](https://github.com/brodybits/sqlite-fake-crypto-batch-connection-core-2020-01)
 
 **Author:** Christopher J. Brody <mailto:chris.brody+brodybits@gmail.com>
 
